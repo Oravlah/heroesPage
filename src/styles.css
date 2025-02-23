@@ -13,7 +13,6 @@ mat-card {
   display: flex;
   flex-direction: column; /* Asegura que los elementos estén en columna */
   align-items: center; /* Centra los elementos dentro del card */
-  background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro */
   border: 2px solid #ffffff; /* Línea blanca en los bordes */
 }
 

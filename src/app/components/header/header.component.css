@@ -1,0 +1,157 @@
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 140px;
+}
+
+
+
+.example-container {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+  height: 100%;
+  background: white;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos solo para los botones dentro del menú */
+.menu-button-heroes {
+  width: 310px;
+  height: 100px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos específicos para el botón de apertura */
+.menu-toggle-button {
+  position: absolute;
+  top: 20px;  /* Ajusta el margen superior */
+  left: 20px; /* Ajusta el margen izquierdo */
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle-button i {
+  font-size: 18px;
+}
+
+
+.menu-button-logout {
+  width: 130px;
+  height: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute; /* Posicionamiento absoluto dentro de su contenedor */
+  bottom: 20px; /* Establece la distancia desde el borde inferior del contenedor */
+  left: 50%; /* Lo posiciona en el centro horizontal */
+  transform: translateX(-50%); /* Ajusta para que se mantenga centrado */
+}
+
+
+/* Estilos generales para el contenedor del menú flotante */
+.floating-menu {
+  position: absolute;
+  top: 20px;  /* Ajusta la distancia desde la parte superior */
+  right: 50%;  /* Lo posiciona en el centro horizontal de la pantalla */
+  transform: translateX(50%); /* Ajusta el desplazamiento para centrarlo completamente */
+  background: white;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra para el fondo flotante */
+  border-radius: 10px;  /* Esquinas redondeadas */
+  display: flex;
+  flex-direction: row;  /* Disposición horizontal de los botones */
+  justify-content: space-between; /* Espacio entre los botones */
+  align-items: center;  /* Centra los botones verticalmente */
+  padding: 10px;
+  gap: 10px; /* Espacio entre los botones */
+  height: 50px;  /* Altura del menú flotante */
+}
+
+/* Estilo para los botones dentro del menú flotante */
+.floating-menu-button {
+  width: 100px;  /* Ajusta el tamaño del botón según sea necesario */
+  height: 40px;  /* Ajusta la altura del botón */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para los botones */
+  border: none;  /* Sin borde en los botones */
+  color: black;  /* Ajusta el color del texto según sea necesario */
+  cursor: pointer;  /* Cambia el cursor para indicar que es un botón clickeable */
+}
+
+/* Sombra del menú flotante */
+.floating-menu {
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para distinguir el fondo */
+}
+
+/* Opcional: Si quieres darle un efecto hover a los botones */
+.floating-menu-button:hover {
+  background-color: #f1f1f1; /* Cambia el color al pasar el ratón */
+}
+
+
+

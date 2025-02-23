@@ -1,0 +1,48 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <button style="color: green;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()">
+      Crear Heroe
+      <i class="fa-solid fa-mask"></i>
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <button style="color: yellow;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()">
+      Editar Heroe
+      <i class="fa-solid fa-mask"></i>
+      <i class="fa-solid fa-pen-to-square"></i>
+    </button>
+
+    <button style="color: red;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()">
+      Eliminar Heroe
+      <i class="fa-solid fa-mask"></i>
+      <i class="fa-solid fa-trash"></i>
+    </button>
+
+    <button style="color: black;" class="menu-button-logout" type="button" mat-button (click)="drawer.toggle()">
+      Cerrar Sesion
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button class="menu-toggle-button" type="button" mat-button (click)="drawer.toggle()">
+      <i class="fa-solid fa-bars"></i>
+      Menu
+    </button>
+  </div>
+
+  <div class="floating-menu">
+    <button class="floating-menu-button" type="button" style="color:royalblue;">
+      Heroes
+    </button>
+    <button class="floating-menu-button" type="button" style="color:royalblue;">
+      Tipos de Heroes
+    </button>
+    <button class="floating-menu-button" type="button" style="color:royalblue;">
+      Botón 3
+    </button>
+    <button class="floating-menu-button" type="button" style="color:royalblue;">
+      Botón 4
+    </button>
+  </div>
+</mat-drawer-container>
