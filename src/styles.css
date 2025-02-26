@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+
+/*ESTILO PERSONALIZADO DE CARTAS*/
+mat-card {
+  margin: 30px;
+  width: 400px; /* Un tamaño más adecuado para un login */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columna */
+  align-items: center; /* Centra los elementos dentro del card */
+  background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro */
+  border: 2px solid #ffffff; /* Línea blanca en los bordes */
+}
+
+mat-form-field {
+  width: 100%; /* Para que los campos ocupen todo el ancho disponible */
+  margin-bottom: 15px; /* Espaciado entre campos */
+}
+
+
+/*ESTILO PERSONALIZADO PARA CONTENEDORES*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
+}
