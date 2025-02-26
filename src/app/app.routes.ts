@@ -3,6 +3,16 @@ import { authGuard } from './auth/guards/auth.guard';
 
 export const routes: Routes = [
   {
+    path: 'body',
+    loadComponent: () => import('./components/body/body.component'),
+    children: [
+      {
+        path: 'inicio',
+        loadComponent: () => import('./pages/inicio/inicio.component')
+      },
+    ]
+  },
+  {
     path: 'login',
     loadComponent: () => import('./auth/pages/login/login.component')
   },
