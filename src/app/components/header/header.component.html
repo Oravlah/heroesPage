@@ -1,24 +1,24 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <button style="color: green;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()">
+    <button style="color: green;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()" (click)="irACrearHeroe()">
       Crear Heroe
       <i class="fa-solid fa-mask"></i>
       <i class="fa-solid fa-plus"></i>
     </button>
 
-    <button style="color: yellow;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()">
+    <button style="color: yellow;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()" (click)="irAEditarHeroe()">
       Editar Heroe
       <i class="fa-solid fa-mask"></i>
       <i class="fa-solid fa-pen-to-square"></i>
     </button>
 
-    <button style="color: red;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()">
+    <button style="color: red;" class="menu-button-heroes" type="button" mat-button (click)="drawer.toggle()" (click)="irABorrarHeroe()">
       Eliminar Heroe
       <i class="fa-solid fa-mask"></i>
       <i class="fa-solid fa-trash"></i>
     </button>
 
-    <button style="color: black;" class="menu-button-logout" type="button" mat-button (click)="drawer.toggle()">
+    <button style="color: black;" class="menu-button-logout" type="button" mat-button (click)="drawer.toggle()" (click)="logout()">
       Cerrar Sesion
       <i class="fa-solid fa-arrow-right-from-bracket"></i>
     </button>

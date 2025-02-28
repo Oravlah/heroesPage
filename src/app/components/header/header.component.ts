@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+
+
+/*IMPORTACIONES DE SERVICIOS*/
+import { AuthService } from '../../auth/services/auth.service';
+
+
 
 /*IMPORTACIONES DE ANGULAR MATERIAL*/
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -14,4 +22,29 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 })
 export default class HeaderComponent {
   showFiller = false;
+
+
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) {}
+
+
+
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
+
+  irACrearHeroe(){
+    this.router.navigate(['/createhero']);
+  }
+
+  irAEditarHeroe(){
+    this.router.navigate(['/edithero']);
+  }
+
+  irABorrarHeroe(){
+    this.router.navigate(['/deletehero']);
+  }
 }

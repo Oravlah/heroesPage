@@ -2,15 +2,32 @@ import { Routes } from '@angular/router';
 import { authGuard } from './auth/guards/auth.guard';
 
 export const routes: Routes = [
+
   {
-    path: 'body',
-    loadComponent: () => import('./components/body/body.component'),
+    path: '',
+    loadComponent: () => import('./layout/layout/layout.component'),
     children: [
       {
         path: 'inicio',
-        loadComponent: () => import('./pages/inicio/inicio.component')
+        loadComponent: () => import('./pages/inicio/inicio.component'),
+      },
+      {
+        path: 'createhero',
+        loadComponent: () => import('./pages/createhero/createhero.component'),
+      },
+      {
+        path: 'edithero',
+        loadComponent: () => import('./pages/edithero/edithero.component'),
+      },
+      {
+        path: 'deletehero',
+        loadComponent: () => import('./pages/deletehero/deletehero.component'),
       },
     ]
+  },
+  {
+    path: 'body',
+    loadComponent: () => import('./components/body/body.component')
   },
   {
     path: 'login',

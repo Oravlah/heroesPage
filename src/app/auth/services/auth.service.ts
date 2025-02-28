@@ -86,7 +86,7 @@ export class AuthService {
   // Ejemplo de una solicitud protegida con token
   getUserData(): Observable<any> {
     const headers = this.getAuthHeaders();
-    return this.http.get(`${this.apiUrl}/users/me/`, { headers }).pipe(
+    return this.http.get(`${this.apiUrl}`, { headers }).pipe(
       catchError(error => {
         console.error("Error al obtener datos del usuario:", error);
         return throwError(() => new Error(error));
