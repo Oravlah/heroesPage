@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule,  } from '@angular/common';
 
 
 
@@ -16,12 +17,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatSidenavModule, MatButtonModule, MatToolbarModule],
+  imports: [MatSidenavModule, MatButtonModule, MatToolbarModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export default class HeaderComponent {
   showFiller = false;
+  isDropdownOpen = false;
+  isDropdownOpenSideBar = false;
 
 
   constructor(
@@ -34,7 +37,19 @@ export default class HeaderComponent {
   logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
+    localStorage.removeItem('token');
   }
+
+
+  abrirCerrarDropdown(){
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  abrirCerrarDropdownSideBar(){
+    this.isDropdownOpenSideBar = !this.isDropdownOpenSideBar;
+  }
+
+
 
   irACrearHeroe(){
     this.router.navigate(['/createhero']);
