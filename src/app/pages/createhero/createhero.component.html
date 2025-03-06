@@ -36,7 +36,7 @@
         <!-- Campo poder -->
         <mat-form-field class="example-full-width">
           <mat-label>poder</mat-label>
-          <input matInput placeholder="23..." formControlName="poder">
+          <input matInput placeholder="volar..." formControlName="poder">
           <mat-error *ngIf="crearHeroeForm.get('poder')?.invalid && crearHeroeForm.get('poder')?.touched">
             {{ getErrorMessage('poder') }}
           </mat-error>
@@ -45,7 +45,7 @@
         <!-- Campo nacionalidad -->
         <mat-form-field class="example-full-width">
           <mat-label>nacionalidad</mat-label>
-          <input matInput placeholder="23..." formControlName="nacionalidad">
+          <input matInput placeholder="chilena..." formControlName="nacionalidad">
           <mat-error *ngIf="crearHeroeForm.get('nacionalidad')?.invalid && crearHeroeForm.get('nacionalidad')?.touched">
             {{ getErrorMessage('nacionalidad') }}
           </mat-error>
@@ -55,7 +55,7 @@
         <!-- Campo descripcion -->
         <mat-form-field class="example-full-width">
           <mat-label>descripcion</mat-label>
-          <input matInput placeholder="23..." formControlName="descripcion">
+          <input matInput placeholder="loquesea..." formControlName="descripcion">
           <mat-error *ngIf="crearHeroeForm.get('descripcion')?.invalid && crearHeroeForm.get('descripcion')?.touched">
             {{ getErrorMessage('descripcion') }}
           </mat-error>

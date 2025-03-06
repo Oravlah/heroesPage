@@ -42,7 +42,7 @@ export class HeroeService {
   }
 
   deleteHeroes(id: string): Observable<Heroe> {
-    const noCacheUrl =  `${this.REST_API_HEROES}/${id}?=t${Date.now()}`;
+    const noCacheUrl =  `${this.REST_API_HEROES}${id}/?=t${Date.now()}`;
     return this.http.delete<Heroe>(noCacheUrl, {headers: this.httpHeaders})
   }
 

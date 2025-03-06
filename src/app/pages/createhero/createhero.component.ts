@@ -31,6 +31,7 @@ export default class CreateheroComponent {
   crearHeroeForm!: FormGroup;
 
 
+
   constructor(
     private fb: FormBuilder,
     private heroeService: HeroeService,
@@ -44,7 +45,7 @@ export default class CreateheroComponent {
       edad: [ '', [Validators.required, Validators.min(0)]],
       poder: ['', [Validators.required, Validators.minLength(3)]],
       nacionalidad: ['', [Validators.required, Validators.minLength(3)]],
-      descripcion: ['', [Validators.required, Validators.minLength(3)]],
+      descripcion: ['', [Validators.required, Validators.minLength(3)]]
     });
   }
 
