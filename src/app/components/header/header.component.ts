@@ -53,6 +53,7 @@ export default class HeaderComponent {
 
   irACrearHeroe(){
     this.router.navigate(['/createhero']);
+    console.log('irACrearHeroe');
   }
 
   irAEditarHeroe(){
