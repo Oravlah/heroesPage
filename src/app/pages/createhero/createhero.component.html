@@ -3,21 +3,61 @@
     <mat-card-content>
 
       <form [formGroup]="crearHeroeForm" (ngSubmit)="onSubmit()">
-        <!-- Campo Email -->
+
+        <!-- Campo Nombre -->
         <mat-form-field class="example-full-width">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="juanito123@gmail.com..." formControlName="email">
-          <mat-error *ngIf="crearHeroeForm.get('email')?.invalid && crearHeroeForm.get('email')?.touched">
-            {{ getErrorMessage('email') }}
+          <mat-label>nombre</mat-label>
+          <input matInput placeholder="oravla..." formControlName="nombre">
+          <mat-error *ngIf="crearHeroeForm.get('nombre')?.invalid && crearHeroeForm.get('nombre')?.touched">
+            {{ getErrorMessage('nombre') }}
           </mat-error>
         </mat-form-field>
 
-        <!-- Campo Contraseña -->
+        <!-- Campo Alias -->
         <mat-form-field class="example-full-width">
-          <mat-label>Contraseña</mat-label>
-          <input matInput type="password" placeholder="qwer1234..." formControlName="password">
-          <mat-error *ngIf="crearHeroeForm.get('password')?.invalid && crearHeroeForm.get('password')?.touched">
-            {{ getErrorMessage('password') }}
+          <mat-label>alias</mat-label>
+          <input matInput placeholder="nombre de heroe..." formControlName="alias">
+          <mat-error *ngIf="crearHeroeForm.get('alias')?.invalid && crearHeroeForm.get('alias')?.touched">
+            {{ getErrorMessage('alias') }}
+          </mat-error>
+        </mat-form-field>
+
+
+        <!-- Campo edad -->
+        <mat-form-field class="example-full-width">
+          <mat-label>edad</mat-label>
+          <input matInput placeholder="23..." formControlName="edad">
+          <mat-error *ngIf="crearHeroeForm.get('edad')?.invalid && crearHeroeForm.get('edad')?.touched">
+            {{ getErrorMessage('edad') }}
+          </mat-error>
+        </mat-form-field>
+
+
+        <!-- Campo poder -->
+        <mat-form-field class="example-full-width">
+          <mat-label>poder</mat-label>
+          <input matInput placeholder="23..." formControlName="poder">
+          <mat-error *ngIf="crearHeroeForm.get('poder')?.invalid && crearHeroeForm.get('poder')?.touched">
+            {{ getErrorMessage('poder') }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Campo nacionalidad -->
+        <mat-form-field class="example-full-width">
+          <mat-label>nacionalidad</mat-label>
+          <input matInput placeholder="23..." formControlName="nacionalidad">
+          <mat-error *ngIf="crearHeroeForm.get('nacionalidad')?.invalid && crearHeroeForm.get('nacionalidad')?.touched">
+            {{ getErrorMessage('nacionalidad') }}
+          </mat-error>
+        </mat-form-field>
+
+
+        <!-- Campo descripcion -->
+        <mat-form-field class="example-full-width">
+          <mat-label>descripcion</mat-label>
+          <input matInput placeholder="23..." formControlName="descripcion">
+          <mat-error *ngIf="crearHeroeForm.get('descripcion')?.invalid && crearHeroeForm.get('descripcion')?.touched">
+            {{ getErrorMessage('descripcion') }}
           </mat-error>
         </mat-form-field>
 

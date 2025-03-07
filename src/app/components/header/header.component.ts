@@ -49,8 +49,6 @@ export default class HeaderComponent {
     this.isDropdownOpenSideBar = !this.isDropdownOpenSideBar;
   }
 
-
-
   irACrearHeroe(){
     this.router.navigate(['/createhero']);
     console.log('irACrearHeroe');
@@ -58,6 +56,7 @@ export default class HeaderComponent {
 
   irAEditarHeroe(){
     this.router.navigate(['/edithero']);
+    console.log('irAEditarHeroe');
   }
 
   irABorrarHeroe(){
