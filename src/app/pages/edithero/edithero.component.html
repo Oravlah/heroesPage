@@ -1,52 +1,68 @@
-<div class="relative overflow-x-auto" class="container">
+<div class="relative overflow-x-auto container">
   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-              <th scope="col" class="px-6 py-3">
-                  Nombre
-              </th>
-              <th scope="col" class="px-6 py-3">
-                  Alias
-              </th>
-              <th scope="col" class="px-6 py-3">
-                  Edad
-              </th>
-              <th scope="col" class="px-6 py-3">
-                  Poder
-              </th>
-              <th scope="col" class="px-6 py-3">
-                  Nacionalidad
-              </th>
-              <th scope="col" class="px-6 py-3">
-                Nacionalidad
-            </th>
+              <th scope="col" class="px-6 py-3">Nombre</th>
+              <th scope="col" class="px-6 py-3">Alias</th>
+              <th scope="col" class="px-6 py-3">Edad</th>
+              <th scope="col" class="px-6 py-3">Poder</th>
+              <th scope="col" class="px-6 py-3">Nacionalidad</th>
+              <th scope="col" class="px-6 py-3">Acciones</th>
           </tr>
       </thead>
       <tbody>
-        @for(listHeroe of listHeroe;track listHeroe._id){
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  {{listHeroe.nombre}}
-              </th>
-              <td class="px-6 py-4">
-                  {{listHeroe.alias}}
-              </td>
-              <td class="px-6 py-4">
-                  {{listHeroe.edad}}
-              </td>
-              <td class="px-6 py-4">
-                  {{listHeroe.poder}}
-              </td>
-              <td class="px-6 py-4">
-                  {{listHeroe.nacionalidad}}
-              </td>
-              <td  class="px-6 py-4">
-                <button type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">
-                  Editar
-                </button>
-              </td>
-
-        }
+        <tr *ngFor="let heroe of listHeroe" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{heroe.nombre}}
+            </th>
+            <td class="px-6 py-4">{{heroe.alias}}</td>
+            <td class="px-6 py-4">{{heroe.edad}}</td>
+            <td class="px-6 py-4">{{heroe.poder}}</td>
+            <td class="px-6 py-4">{{heroe.nacionalidad}}</td>
+            <td class="px-6 py-4">
+              <button (click)="openEditModal(heroe.id)" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">
+                Editar
+              </button>
+            </td>
+        </tr>
       </tbody>
   </table>
+</div>
+
+<!-- Modal -->
+<div *ngIf="showModal" class="fixed z-10 inset-0 overflow-y-auto">
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+    </div>
+    <div class="relative bg-white dark:bg-gray-800 rounded-lg max-w-md mx-auto p-6">
+      <h3 class="text-lg font-medium mb-4">Editar Héroe</h3>
+      <form [formGroup]="heroesForm" (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+          <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+          <input type="text" id="nombre" formControlName="nombre" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-300 focus:ring-opacity-50">
+        </div>
+        <div class="mb-4">
+          <label for="alias" class="block text-sm font-medium text-gray-700">Alias</label>
+          <input type="text" id="alias" formControlName="alias" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-300 focus:ring-opacity-50">
+        </div>
+        <div class="mb-4">
+          <label for="edad" class="block text-sm font-medium text-gray-700">edad</label>
+          <input type="text" id="edad" formControlName="edad" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-300 focus:ring-opacity-50">
+        </div>
+        <div class="mb-4">
+          <label for="poder" class="block text-sm font-medium text-gray-700">poder</label>
+          <input type="text" id="poder" formControlName="poder" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-300 focus:ring-opacity-50">
+        </div>
+        <div class="mb-4">
+          <label for="nacionalidad" class="block text-sm font-medium text-gray-700">nacionalidad</label>
+          <input type="text" id="nacionalidad" formControlName="nacionalidad" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-300 focus:ring-opacity-50">
+        </div>
+        <div class="flex justify-end">
+          <button type="button" (click)="closeModal()" class="text-gray-600 dark:text-gray-400 mr-2">Cancelar</button>
+          <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5">Guardar Cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

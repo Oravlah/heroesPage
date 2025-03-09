@@ -1,5 +1,5 @@
 export interface Heroe{
-  _id: string;
+  id: string;
   nombre: string;
   alias: string;
   edad: number;

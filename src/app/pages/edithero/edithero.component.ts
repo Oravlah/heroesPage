@@ -84,7 +84,7 @@ export default class EditheroComponent implements OnInit {
     if (this.selectedHeroeId) {
       const updateHeroe: Heroe = {
         ...this.heroesForm.value,
-        _id: this.selectedHeroeId
+        id: this.selectedHeroeId
       };
 
       this.heroeService.updateHeroes(updateHeroe).subscribe({

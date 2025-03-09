@@ -31,12 +31,12 @@ export class HeroeService {
   }
 
   getHeroeById(id: string): Observable<Heroe> {
-    const noCacheUrl =  `${this.REST_API_HEROES}/${id}?=t${Date.now()}`;
+    const noCacheUrl =  `${this.REST_API_HEROES}${id}?=t${Date.now()}`;
     return this.http.get<Heroe>(noCacheUrl, {headers: this.httpHeaders})
   }
 
   updateHeroes(heroe: Heroe): Observable<Heroe>{
-    const noCacheUrl =  `${this.REST_API_HEROES}/${heroe._id}?=t${Date.now()}`;
+    const noCacheUrl =  `${this.REST_API_HEROES}${heroe.id}/?=t${Date.now()}`;
     return this.http.put<Heroe>(noCacheUrl, heroe, {headers: this.httpHeaders})
     .pipe(catchError(this.handleError));
   }
