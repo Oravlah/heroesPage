@@ -1,0 +1,24 @@
+<div class="relative overflow-x-auto container">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">Nombre</th>
+              <th scope="col" class="px-6 py-3">Alias</th>
+              <th scope="col" class="px-6 py-3">Edad</th>
+              <th scope="col" class="px-6 py-3">Poder</th>
+              <th scope="col" class="px-6 py-3">Nacionalidad</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let heroe of listHeroes" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{heroe.nombre}}
+            </th>
+            <td class="px-6 py-4">{{heroe.alias}}</td>
+            <td class="px-6 py-4">{{heroe.edad}}</td>
+            <td class="px-6 py-4">{{heroe.poder}}</td>
+            <td class="px-6 py-4">{{heroe.nacionalidad}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>

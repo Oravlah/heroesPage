@@ -23,6 +23,18 @@ export const routes: Routes = [
         path: 'deletehero',
         loadComponent: () => import('./pages/deletehero/deletehero.component'),
       },
+      {
+        path: 'aboutproject',
+        loadComponent: () => import('./pages/aboutproject/aboutproject.component'),
+      },
+      {
+        path: 'listheroes',
+        loadComponent: () => import('./pages/listheroes/listheroes.component'),
+      },
+      {
+        path: 'contact',
+        loadComponent: () => import('./pages/contact/contact.component'),
+      },
     ]
   },
   {
